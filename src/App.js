@@ -38,8 +38,13 @@ const NavButton = styled.button`
   cursor: pointer;
 `;
 
-const CustomImg = ({ url, alt }) => {
-  return <StyledImg src={`/chicago/blob/gh-pages/${url}`} alt={alt} />;
+const CustomImg = ({ src, alt }) => {
+  return (
+    <StyledImg
+      src={`https://github.com/abys7free/chicago/blob/master/public${src}?raw=true`}
+      alt={alt}
+    />
+  );
 };
 
 function App() {
