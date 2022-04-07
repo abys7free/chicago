@@ -38,6 +38,10 @@ const NavButton = styled.button`
   cursor: pointer;
 `;
 
+const CustomImg = ({ url, alt }) => {
+  return <img src={`/chicago/blob/gh-pages/${url}`} alt={alt} />;
+};
+
 function App() {
   const synopRef = useRef(null);
   const castRef = useRef(null);
@@ -69,16 +73,16 @@ function App() {
       <ButtonContainer>
         <GridBtnContainer>
           <NavButton className="synopsis_btn" onClick={onClickHander}>
-            <img src="/synop_btn.png" alt="synopsis_btn" />
+            <CustomImg src="/synop_btn.png" alt="synopsis_btn" />
           </NavButton>
           <NavButton className="cast_btn" onClick={onClickHander}>
-            <img src="/cast_btn.png" alt="cast_btn" />
+            <CustomImg src="/cast_btn.png" alt="cast_btn" />
           </NavButton>
           <NavButton className="schedule_btn" onClick={onClickHander}>
-            <img src="/schedule_btn.png" alt="schedule_btn" />
+            <CustomImg src="/schedule_btn.png" alt="schedule_btn" />
           </NavButton>
           <NavButton className="location_btn" onClick={onClickHander}>
-            <img src="/location_btn.png" alt="location_btn" />
+            <CustomImg src="/location_btn.png" alt="location_btn" />
           </NavButton>
         </GridBtnContainer>
       </ButtonContainer>
