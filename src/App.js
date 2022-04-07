@@ -39,7 +39,7 @@ const NavButton = styled.button`
 `;
 
 const CustomImg = ({ url, alt }) => {
-  return <img src={`/chicago/blob/gh-pages/${url}`} alt={alt} />;
+  return <StyledImg src={`/chicago/blob/gh-pages/${url}`} alt={alt} />;
 };
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
   return (
     <StyledContainer>
       <ImgContainer height={"100%"}>
-        <StyledImg src="/poster.png" alt="poster" />
+        <CustomImg src="/poster.png" alt="poster" />
       </ImgContainer>
       <ButtonContainer>
         <GridBtnContainer>
@@ -87,19 +87,19 @@ function App() {
         </GridBtnContainer>
       </ButtonContainer>
       <ImgContainer ref={synopRef} height={"100%"}>
-        <StyledImg src="/synopsis.png" alt="synopsis" />
+        <CustomImg src="/synopsis.png" alt="synopsis" />
       </ImgContainer>
       <ImgContainer height={"100%"}>
-        <StyledImg src="/relation_map.png" alt="relation_map" />
+        <CustomImg src="/relation_map.png" alt="relation_map" />
       </ImgContainer>
       <ImgContainer ref={castRef} height={"100%"}>
-        <StyledImg src="/cast.png" alt="cast" />
+        <CustomImg src="/cast.png" alt="cast" />
       </ImgContainer>
       <ImgContainer ref={scheduleRef} height={"100%"}>
-        <StyledImg src="/schedule.png" alt="schedule" />
+        <CustomImg src="/schedule.png" alt="schedule" />
       </ImgContainer>
       <ImgContainer ref={locationRef} className="location" height={"100%"}>
-        <StyledImg src="/location.png" alt="location" />
+        <CustomImg src="/location.png" alt="location" />
       </ImgContainer>
     </StyledContainer>
   );
