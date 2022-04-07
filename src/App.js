@@ -29,7 +29,13 @@ const ButtonContainer = styled.div`
 
 const GridBtnContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: ${(props) => {
+    if (props.cols === 2) {
+      return "1fr 1fr";
+    } else {
+      return "1fr 1fr 1fr 1fr";
+    }
+  }};
 `;
 
 const NavButton = styled.button`
@@ -107,7 +113,7 @@ function App() {
         <CustomImg src="/location_1.png" alt="location" />
       </ImgContainer>
       <ButtonContainer>
-        <GridBtnContainer>
+        <GridBtnContainer cols={2}>
           <NavButton className="synopsis_btn">
             <a href="http://naver.me/GVAVI1AL">
               <CustomImg src="/naver_btn.png" alt="naver_btn" />
