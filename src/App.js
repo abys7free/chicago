@@ -104,7 +104,24 @@ function App() {
         <CustomImg src="/schedule.png" alt="schedule" />
       </ImgContainer>
       <ImgContainer ref={locationRef} className="location" height={"100%"}>
-        <CustomImg src="/location.png" alt="location" />
+        <CustomImg src="/location_1.png" alt="location" />
+      </ImgContainer>
+      <ButtonContainer>
+        <GridBtnContainer>
+          <NavButton className="synopsis_btn">
+            <a href="http://naver.me/GVAVI1AL">
+              <CustomImg src="/naver_btn.png" alt="naver_btn" />
+            </a>
+          </NavButton>
+          <NavButton className="cast_btn">
+            <a href="http://kko.to/b8c6vLAse">
+              <CustomImg src="/kakao_btn.png" alt="kakao_btn" />
+            </a>
+          </NavButton>
+        </GridBtnContainer>
+      </ButtonContainer>
+      <ImgContainer className="location" height={"100%"}>
+        <CustomImg src="/location_2.png" alt="location" />
       </ImgContainer>
     </StyledContainer>
   );
