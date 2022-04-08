@@ -3,25 +3,30 @@ import styled from "styled-components";
 import { useRef } from "react";
 
 const StyledContainer = styled.div`
-  width: auto;
-  height: auto;
-  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ImgContainer = styled.div`
-  width: auto;
-  height: ${(props) => props.height};
+  width: 100%;
   display: flex;
   justify-content: center;
 `;
 
 const StyledImg = styled.img`
-  height: 100%;
+  width: 100%;
+  max-width: 768px;
 `;
 
 const ButtonContainer = styled.div`
-  width: auto;
+  width: 100%;
   height: 200px;
+  max-width: 768px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +83,7 @@ function App() {
 
   return (
     <StyledContainer>
-      <ImgContainer height={"100%"}>
+      <ImgContainer>
         <CustomImg src="/poster.png" alt="poster" />
       </ImgContainer>
       <ButtonContainer>
@@ -97,19 +102,19 @@ function App() {
           </NavButton>
         </GridBtnContainer>
       </ButtonContainer>
-      <ImgContainer ref={synopRef} height={"100%"}>
+      <ImgContainer ref={synopRef}>
         <CustomImg src="/synopsis.png" alt="synopsis" />
       </ImgContainer>
-      <ImgContainer height={"100%"}>
+      <ImgContainer>
         <CustomImg src="/relation_map.png" alt="relation_map" />
       </ImgContainer>
-      <ImgContainer ref={castRef} height={"100%"}>
+      <ImgContainer ref={castRef}>
         <CustomImg src="/cast.png" alt="cast" />
       </ImgContainer>
-      <ImgContainer ref={scheduleRef} height={"100%"}>
+      <ImgContainer ref={scheduleRef}>
         <CustomImg src="/schedule.png" alt="schedule" />
       </ImgContainer>
-      <ImgContainer ref={locationRef} className="location" height={"100%"}>
+      <ImgContainer ref={locationRef} className="location">
         <CustomImg src="/location_1.png" alt="location" />
       </ImgContainer>
       <ButtonContainer>
@@ -126,7 +131,7 @@ function App() {
           </NavButton>
         </GridBtnContainer>
       </ButtonContainer>
-      <ImgContainer className="location" height={"100%"}>
+      <ImgContainer className="location">
         <CustomImg src="/location_2.png" alt="location" />
       </ImgContainer>
     </StyledContainer>
